@@ -1,4 +1,4 @@
-package openagile.pms.storymanagement;
+package openagile.pms.storymanagement.service;
 
 import static org.springframework.data.mongodb.core.FindAndModifyOptions.options;
 import static org.springframework.data.mongodb.core.query.Criteria.where;
