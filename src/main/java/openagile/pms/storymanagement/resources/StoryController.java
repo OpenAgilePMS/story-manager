@@ -13,9 +13,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import openagile.pms.storymanagement.NextSequenceService;
 import openagile.pms.storymanagement.modal.UserStory;
 import openagile.pms.storymanagement.repository.UserStoryRepository;
+import openagile.pms.storymanagement.service.NextSequenceService;
 
 @RestController
 @RequestMapping("/stories")

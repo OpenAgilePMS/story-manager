@@ -1,5 +1,7 @@
 package openagile.pms.storymanagement.modal;
 
+import java.util.List;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -10,16 +12,23 @@ public class UserStory {
 	@Id
 	private int id;
 
-	@Indexed(name="name", unique=true)
+	@Indexed(name = "name", unique = true)
 	private String name;
 
 	private String description;
+
 	private String sprintNumber;
+
 	private String owner;
+
 	private String childFeature;
-	
+
+	private List<Task> tasks;
+
+	private List<TestCase> testCases;
+
 	public UserStory() {
-		
+
 	}
 
 	public UserStory(String name, String description, String sprintNumber, String owner, String childFeature) {
@@ -77,6 +86,22 @@ public class UserStory {
 
 	public void setChildFeature(String childFeature) {
 		this.childFeature = childFeature;
+	}
+
+	public List<Task> getTasks() {
+		return tasks;
+	}
+
+	public void setTasks(List<Task> tasks) {
+		this.tasks = tasks;
+	}
+
+	public List<TestCase> getTestCases() {
+		return testCases;
+	}
+
+	public void setTestCases(List<TestCase> testCases) {
+		this.testCases = testCases;
 	}
 
 	public void updateValues(UserStory updatedStory) {
